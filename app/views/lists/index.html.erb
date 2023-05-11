@@ -1,0 +1,14 @@
+<h1>Lists</h1>
+<%= link_to "Make a new list", new_list_path %>
+<% @lists.each do |list| %>
+  <div class="card-product">
+
+  <div class="card-product-infos">
+   <%= link_to list.name, list_path(list), class: 'text-dark text-decoration-none' %>
+
+  </div>
+</div>
+
+
+
+<% end %>
