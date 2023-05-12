@@ -1,15 +1,16 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), ());">
-  <div class="container">
+<div class="banner">
     <h1>Movies lists</h1>
-  </div>
 </div>
+  <div class="container">
+  </div>
 <%= link_to "Make a new list", new_list_path %>
-<div class="container my-5">
-  <div class="cards">
-    <% @lists.each do |list| %>
-      <div class="card-category">
-        <%= link_to list.name, list_path(list), class: 'card-category-link'%>
-      </div>
-    <% end %>
+
+<% @lists.each do |list| %>
+  <div class="container my-5">
+        <div class="card-product">
+        <%= list.photo.attached? ? cl_image_tag(list.photo.key) : "" %>
+          <%= link_to list.name, list_path(list), class: 'card-product-infos'%>
+          </div>
+        </div>
   </div>
-</div>
+<% end %>

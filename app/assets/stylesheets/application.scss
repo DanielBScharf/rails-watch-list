@@ -13,4 +13,5 @@
  *= require_tree .
  *= require_self
  */
- @import 'cards'
+ @import 'bootstrap/scss/bootstrap';
+ @import 'components/index';

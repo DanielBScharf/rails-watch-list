@@ -10,11 +10,12 @@
 
 <ul>
 <% @list.bookmarks.each do |bookmark|%>
-  <div class="card-hello">
+  <div class="card-product">
     <%= image_tag "#{bookmark.movie.poster_url}" %>
-    <div class="card-hello-info">
+    <div class="card-product-info">
       <h2> <%= bookmark.movie.title %></h2>
       <p> <%= bookmark.movie.rating%></p>
+      <p> <%= bookmark.movie.overview%></p>
     </div>
   </div>
 <% end %>
