@@ -1,7 +1,10 @@
+<div class="banner">
 <div class="page-frame-content">
     <div class="page-frame-header">
 <h1><%= @list.name %></h1>
-<%= link_to 'Back to home', root_path, class: "btn btn_success" %>
+</div>
+</div>
+<%= link_to 'Back to home', root_path, class: "btn btn_success btn-lg" %>
 <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'btn btn_primary' %>
     </div>
     <div class="page-frame-body">
@@ -22,4 +25,3 @@
 
     <div class="page-frame-footer">
     </div>
-  </div>
