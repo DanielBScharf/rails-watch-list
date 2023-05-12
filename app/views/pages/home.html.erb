@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), ());">
+  <div class="container">
+    <h1>Movies lists</h1>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category">
+        <%= link_to list.name, list_path(list), class: 'card-category-link'%>
+      </div>
+    <% end %>
+  </div>
+</div>
